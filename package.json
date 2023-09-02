@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "nodemon client_wpp.js"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "https://github.com/Julzk/whatsapp-web.js/tarball/jkr_hotfix_7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
