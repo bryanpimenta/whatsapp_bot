@@ -13,11 +13,11 @@ client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
 
 client.on('ready', () => { // Quando a aplicação estiver pronta para ser usada imprime a mensagem
     console.log('Online e operando! ✨');
-/*     client.getChats().then(chats => {
+    client.getChats().then(chats => {
         chats.map(chat => {
-        console.log(chat.name);
+        console.log(chat);
         });
-    }); */
+    });
 });
 
 client.on('message', message => { // Pega as conversas em tempo real
