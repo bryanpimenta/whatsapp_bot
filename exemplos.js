@@ -1,16 +1,10 @@
-// Evento de mensagem
-
-// Envia mensagem para alguém
-client.sendMessage(message.from, ziggs);
-// message.from = id._serialized
-
 client.on('message', message => {
-    // condição da mensagem
+    // se a mensagem recebida for "!entrou"
 	if(message.body === '!entrou') { 
         // formata imagem para envio
         const michelly_media = MessageMedia.fromFilePath(michelly);
-        // (pra quem?, qual mensagem?, qual arquivo?) -> envia o texto + arquivo mídia
-        client.sendMessage(message.from, "Michelly Ziggs", { media: michelly_media }); 
+        // (para quem?, qual mensagem?, qual arquivo?) -> envia o texto + arquivo mídia
+        client.sendMessage(message.from, "Michelly Ziggs", { media: michelly_media }); // message.from = id._serialized
 	};
 });
 
@@ -21,10 +15,8 @@ client.on('group_join', notification => { // captura evento de entrada no grupo
     };
 });
 
-// Pega todas informações de chat, recomendo explorar bem essa pois traz todas informações que da pra reutilizar como:
-// Para obter informações de todos os chats, você pode usar o seguinte código.
+// Para obter informações de todos os chats que você tem, use o método getChats().
 // Ele é valioso, pois traz informações que podem ser reutilizadas.
-
 client.getChats().then(chats => {
   chats.map(chat => {
     if (chat.isGroup) {

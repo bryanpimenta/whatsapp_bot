@@ -13,11 +13,6 @@ client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
 
 client.on('ready', () => { // Quando a aplicação estiver pronta para ser usada imprime a mensagem
     console.log('Online e operando! ✨');
-/*     client.getChats().then(chats => {
-        chats.map(chat => {
-        console.log(chat);
-        });
-    }); */
 });
 
 client.on('message', message => { // Pega as conversas em tempo real
@@ -55,7 +50,7 @@ client.on('message', message => { // Se receber mensagem: !entrou
 });
 
 client.on('group_join', notification => { // captura evento de entrada no grupo
-    if (notification.chatId === '120363171480059289@g.us') { // se a notificação for do grupo dos Amomus
+    if (notification.chatId === '120363171480059289@g.us') { // se a notificação for do grupo dos Amomus: id do grupo
         client.sendMessage(notification.id.participant, 'Bem vindo ao grupo dos Amomus!'); // envia mensagem para quem entrou no grupo
     };
 });
