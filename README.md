@@ -23,6 +23,7 @@ Sera gerado um QR CODE de autenticação no terminal
 Tenha muita atenção ao desenvolver funções para envio de mensagens, principalmente as que envolvem loops ou envio em massa (para todos contatos).
 
 # Uso
+Para interagir, outra pessoa precisa te mandar os comandos! 
 Você pode dar uma olhadinha na documentação https://wwebjs.dev/guide/#installation e explorar todas as funções disponiveis.
 
 Neste projeto fiz algumas para que possa interagir de imediato
