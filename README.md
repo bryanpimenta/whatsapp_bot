@@ -32,5 +32,9 @@ Exemplos de comando pronto
 /michelly
 /ping
 /gatinho
+/doguinho
+/bomdia
+/boanoite
+/mas eu quero agora
 
 ### Irei fazer mais funções em breve

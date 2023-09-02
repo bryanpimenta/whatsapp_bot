@@ -1,20 +1,3 @@
-client.on('message', message => {
-    // se a mensagem recebida for "!entrou"
-	if(message.body === '!entrou') { 
-        // formata imagem para envio
-        const michelly_media = MessageMedia.fromFilePath(michelly);
-        // (para quem?, qual mensagem?, qual arquivo?) -> envia o texto + arquivo mídia
-        client.sendMessage(message.from, "Michelly Ziggs", { media: michelly_media }); // message.from = id._serialized
-	};
-});
-
-// Evento de entrada no grupo
-client.on('group_join', notification => { // captura evento de entrada no grupo
-    if (notification.chatId === '120363171480059289@g.us') { // se a notificação for do grupo dos Amomus
-        client.sendMessage(notification.id.participant, 'Bem vindo ao grupo dos Amomus!'); // envia mensagem para quem entrou no grupo
-    };
-});
-
 // Para obter informações de todos os chats que você tem, use o método getChats().
 // Ele é valioso, pois traz informações que podem ser reutilizadas.
 client.getChats().then(chats => {

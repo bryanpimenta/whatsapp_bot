@@ -2,9 +2,14 @@ const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const michelly = './images/michelly.jpg';
 const BOM_DIA = './videos/bomdia.mp4';
+const BOA_NOITE = './videos/boanoite.mp4';
+const AGORA = './videos/mas-eu-quero-agora.mp4';
 
 const client = new Client({ // Criando o cliente e passando as credenciais
   authStrategy: new LocalAuth(),
+/*   puppeteer: {
+    executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // Para mandar video precisa usar o chrome
+  } */
 });
 
 client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
@@ -21,15 +26,14 @@ client.on('message', message => { // Pega as conversas em tempo real
     });
 });
 
-client.on('message', async message => { // Se receber mensagem: /michelly
+client.on('message', async message => { // /michelly
     if (message.body === '/michelly') {
         const ziggs = MessageMedia.fromFilePath(michelly);
-        client.sendMessage(message.from, `*MICHELLLLLLLLY ZIGGSSSSSSSSSSSSSSS*💣🌷`);
-        client.sendMessage(message.from, ziggs);
+        client.sendMessage(message.from, `*MICHELLLLLLLLY ZIGGSSSSSSSSSSSSSSS*💣🌷`, { media: ziggs });
     }
 });
 
-client.on('message', message => { // mande /ping e retorna pong
+client.on('message', message => { // /ping
 	if(message.body === '/ping') {
 		message.reply('pong');
 	}
@@ -42,10 +46,27 @@ client.on('message', message => {
 	}
 }); */
 
-client.on('message', message => { // Se receber mensagem: /entrou
-	if(message.body === '/entrou') {
-        const michelly_media = MessageMedia.fromFilePath(michelly);
-        client.sendMessage(message.from, "Michelly Ziggs", { media: michelly_media });
+client.on('message', async message => { // /bomdia
+	if(message.body === '/bomdia') {
+        const bomdia_video = MessageMedia.fromFilePath(BOM_DIA);
+        message.react('🌞');
+        client.sendMessage(message.from, bomdia_video);
+	};
+});
+
+client.on('message', async message => { // /boanoite
+	if(message.body === '/boanoite') {
+        const boanoite_video = MessageMedia.fromFilePath(BOA_NOITE);
+        message.react('🌙');
+        client.sendMessage(message.from, boanoite_video);
+	};
+});
+
+client.on('message', async message => { // /mas eu quero agora
+	if(message.body === '/mas eu quero agora') {
+        const agora_video = MessageMedia.fromFilePath(AGORA);
+        message.react('😡');
+        client.sendMessage(message.from, agora_video);
 	};
 });
 
