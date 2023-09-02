@@ -1,5 +1,5 @@
 # whatsapp_bot
-Está é uma configuração rápida e direta para o uso da aplicação `whatsapp-web` com sua documentação disponivel em: https://wwebjs.dev/guide/#installation
+Está é uma configuração rápida e direta para o uso da aplicação `whatsapp-web` com sua guia disponivel em: https://wwebjs.dev/guide/#installation
 
 # Instalação
 Certifique-se de que o Node.js esteja instalado em seu sistema antes de prosseguir.
@@ -24,12 +24,13 @@ Tenha muita atenção ao desenvolver funções para envio de mensagens, principa
 
 # Uso
 Para interagir, outra pessoa precisa te mandar os comandos! 
-Você pode dar uma olhadinha na documentação https://wwebjs.dev/guide/#installation e explorar todas as funções disponiveis.
+Você pode dar uma olhadinha na documentação https://docs.wwebjs.dev e explorar todas as funções disponiveis.
 
 Neste projeto fiz algumas para que possa interagir de imediato
 
 Exemplos de comando pronto
-!michelly
-!ping
+/michelly
+/ping
+/gatinho
 
 ### Irei fazer mais funções em breve
