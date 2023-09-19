@@ -28,13 +28,15 @@ Você pode dar uma olhadinha na <a href="https://docs.wwebjs.dev">Documentação
 
 Neste projeto fiz algumas para que possa interagir de imediato
 
-Exemplos de comando pronto
-/michelly
-/ping
-/gatinho
-/doguinho
-/bomdia
-/boanoite
-/mas eu quero agora
+Exemplos de comandos prontos que reagem:
+`/michelly`
+`/ping`
+`/gatinho`
+`/doguinho`
+`/bomdia`
+`/boanoite`
+`/mas eu quero agora`
+
+Esse comandos foram feitos para um grupo no whatsapp com meus amigos, sintasse a vontade para usar e mudar
 
 ### Irei fazer mais funções em breve
