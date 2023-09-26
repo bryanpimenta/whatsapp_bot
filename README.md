@@ -5,13 +5,19 @@ Está é uma configuração rápida e direta para o uso da aplicação `whatsapp
 Certifique-se de que o Node.js esteja instalado em seu sistema antes de prosseguir.
 
 ## Passo 1: Clone o repositório
-`git clone https://github.com/bryanpimenta/whatsapp_bot.git`
+```bash
+git clone https://github.com/bryanpimenta/whatsapp_bot.git
+```
 
 ## Passo 2: Instale as dependencias
-`npm install`
+```bash
+npm install
+```
 
 ## Passo 3: Rode a aplicação
-`npm run dev`
+```bash
+npm run dev
+```
 
 ## Passo 4: Logue com seu WhatsApp
 
