@@ -12,11 +12,11 @@ const AGORA = './videos/mas-eu-quero-agora.mp4';
 const JOKER_GIF = './gifs/gif-do-joker.gif';
 
 const client = new Client({ // Criando o cliente e passando as credenciais
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-        executablePath: '/opt/google/chrome/google-chrome',
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    }
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    executablePath: '/opt/google/chrome/google-chrome',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  }
 });
 
 client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
