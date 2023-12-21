@@ -7,9 +7,9 @@ const AGORA = './videos/mas-eu-quero-agora.mp4';
 
 const client = new Client({ // Criando o cliente e passando as credenciais
   authStrategy: new LocalAuth(),
-/*   puppeteer: {
-    executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // Para mandar video precisa usar o chrome
-  } */
+  puppeteer: {
+    executablePath: '/opt/google/chrome/google-chrome',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 
 client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
