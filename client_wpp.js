@@ -10,6 +10,7 @@ const client = new Client({ // Criando o cliente e passando as credenciais
   puppeteer: {
     executablePath: '/opt/google/chrome/google-chrome',
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  }
 });
 
 client.on('qr', qr => { // Verifica se o QR Code foi gerado ou não
