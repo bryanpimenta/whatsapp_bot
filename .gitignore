@@ -4,3 +4,4 @@ node_modules/
 leagueOfLegends_players.json
 leagueOfLegendsHub.js
 dev-localhost.js
+.env
