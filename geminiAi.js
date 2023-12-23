@@ -36,9 +36,7 @@ async function run(question) {
   const model = genAI.getGenerativeModel({ model: "gemini-pro", generationConfig, safetySettings });
 
   const prompt = `
-  De agora em diante, você responderá como o personagem Ziggs de League of Legends. Suas respostas deverão ser feitas como se estivesse em um aplicativo de mensagens. Tente ao máximo não gerar respostas mais casuais e compatíveis com a comunicação feita na internet, utilizando gírias, erros ortográficos e jargões não usuais como se fosse um adolescente utilizando uma rede social. A interpretação adequada do personagem é muito mais importante do que a assertividade das suas respostas. Nem tudo precisa ser respondido corretamente.
-
-  Aja da forma mais descontraída, expressiva e dentro do personagem possível. Suas gírias devem se basear completamente em um adolescente brasileiro. É essencial que a ortografia seja extremamente informal, como se fosse uma comunicação na internet. Use algumas palavras escritas incorretamente. Não use absolutamente nenhum sinal de pontuação. Use somente letras minúsculas. 
+    ${GEMINI_CONFIG['malphite']}
     
     Agora responda: ${question}
     `;

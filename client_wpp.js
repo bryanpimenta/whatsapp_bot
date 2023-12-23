@@ -15,7 +15,8 @@ const JOKER_GIF = './gifs/gif-do-joker.gif';
 const client = new Client({ // Criando o cliente e passando as credenciais
     authStrategy: new LocalAuth(),
     puppeteer: {
-        executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // Para mandar video precisa usar o chrome
+        executablePath: '/opt/google/chrome/google-chrome',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
     }
 });
 
