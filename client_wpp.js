@@ -1,3 +1,6 @@
+/**@deprecated */
+
+
 const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const run = require('./geminiAi.js');
@@ -34,7 +37,7 @@ client.on('message', message => { // Pega as conversas em tempo real
     });
 });
 
-client.on('message', async message => { // Gera pergunta ao Gemini no grupo caso mensionado
+client.on('message', async message => { // Gera pergunta ao Gemini no grupo caso mencionado
     const me = client.info.wid._serialized;
     if (message.mentionedIds.includes(me)) {
         const mg = message.body;

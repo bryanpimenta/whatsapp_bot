@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "nodemon client_wpp.js"
+    "dev": "nodemon app/index.js",
+    "dev-docker": "nodemon --legacy-watch app/index.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.1.3",
