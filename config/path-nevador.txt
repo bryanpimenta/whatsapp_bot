@@ -1,0 +1,14 @@
+Navegador no meu pc
+
+    puppeteer: {
+        executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', // Para mandar video precisa usar o chrome
+    }
+
+
+Executavel do pc na AWS-Linux
+
+    puppeteer: {
+        executablePath: '/opt/google/chrome/google-chrome',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      }
+
