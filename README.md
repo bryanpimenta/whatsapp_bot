@@ -46,8 +46,10 @@ Exemplos de comandos prontos que reagem:
 Esse comandos foram feitos para um grupo no whatsapp com meus amigos, sintasse a vontade para usar, modificar ou adicionar.
 
 # Gemini e ChatGPT
-Está aplicação possui integração com IAs. Existe modulos de ambos instalados no projeto. Além do código que precisa ser descomentados em `messages.js` para poder interagir com as IAs. Basta fazer o que disse antes e criar um arquivo `.env` com sua APIKEY seja de qual vá usar.
+Está aplicação possui integração com IAs da Gemini e ChatGPT. Existe modulos de ambos instalados no projeto. Além do código que precisa ser descomentados em `messages.js` para poder interagir com as IAs. Basta fazer o que disse antes e criar um arquivo `.env` com sua `APIKEY` seja de qual vá usar.
 
-Agredecimentos em especial ao <a href="https://github.com/marcosebsilva">Marquinhos</a> pela refatoração atomica.
+Em `config/prompt.json` você delimita a personalidade da sua assistente.
 
-### Irei fazer mais funções em breve
+# 
+
+Agredecimentos em especial ao <a href="https://github.com/marcosebsilva">Marquinhos 😎</a> pela refatoração atômica.
