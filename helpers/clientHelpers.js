@@ -1,6 +1,5 @@
-const wppPackage = require('whatsapp-web.js');
-const { MessageMedia } = wppPackage;
-const client = require('../app/client')
+const { MessageMedia } = require('whatsapp-web.js');
+const client = require('../app/client');
 
 async function sendMessage({
     media,
@@ -16,6 +15,7 @@ async function sendMessage({
 
     /** Teoricamente isso permite que seja enviado um caminho para um arquivo local
      * mas é bem provável que isso quebre de alguma forma. */
+
     const _media = typeof media == 'string'
         ? MessageMedia.fromFilePath(media)
         : media;

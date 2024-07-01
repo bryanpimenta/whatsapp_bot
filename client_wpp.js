@@ -3,7 +3,7 @@
 
 const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
-const run = require('./geminiAi.js');
+// const run = require('./geminiAi.js');
 const Chat = require('whatsapp-web.js/src/structures/Chat.js');
 const GroupChat = require('whatsapp-web.js/src/structures/GroupChat.js');
 const Contact = require('whatsapp-web.js/src/structures/Contact.js');
@@ -18,7 +18,8 @@ const JOKER_GIF = './gifs/gif-do-joker.gif';
 const client = new Client({ // Criando o cliente e passando as credenciais
     authStrategy: new LocalAuth(),
     puppeteer: {
-        executablePath: '/opt/google/chrome/google-chrome',
+        // executablePath: '/opt/google/chrome/google-chrome',
+        executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
     }
 });
@@ -37,7 +38,7 @@ client.on('message', message => { // Pega as conversas em tempo real
     });
 });
 
-client.on('message', async message => { // Gera pergunta ao Gemini no grupo caso mencionado
+/* client.on('message', async message => { // Gera pergunta ao Gemini no grupo caso mencionado
     const me = client.info.wid._serialized;
     if (message.mentionedIds.includes(me)) {
         const mg = message.body;
@@ -53,7 +54,7 @@ client.on('message', async message => { // Gera pergunta ao Gemini no privado
         const res = await run(mg);
         client.sendMessage(message.from, `${res}`);
     }
-});
+}); */
 
 client.on('message', async message => { // /michelly
     if (message.body === '/michelly') {

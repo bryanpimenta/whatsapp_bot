@@ -1,11 +1,11 @@
 const fs = require('fs');
-const client =  require('./client.js')
-const qrcode = require('qrcode-terminal')
-const dotenv = require('dotenv')
-const path = require('path')
+const client =  require('./client.js');
+const qrcode = require('qrcode-terminal');
+const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config({ path: ".env" });
-const EVENT_DIR = __dirname + '/../events'
+const EVENT_DIR = __dirname + '/../events';
 
 /** Gera um QRCode pra autenticar no WhatsApp web */
 client.on('qr', qr => { 
@@ -15,6 +15,8 @@ client.on('qr', qr => {
 
 /** Quando a aplicação estiver pronta para ser usada, imprime essa mensagem. */
 client.on('ready', async () => {
+    const version = await client.getWWebVersion();
+    console.log(`WWeb v${version}`);
     console.log('Online e operando! ✨');
 });
 
